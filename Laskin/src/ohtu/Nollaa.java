@@ -11,23 +11,16 @@ import javax.swing.JTextField;
  *
  * @author Antero Oikkonen
  */
-public class Summa extends Komento{
+public class Nollaa extends Komento {
 
-    public Summa(Sovelluslogiikka sovellus, JTextField tuloskentta, JTextField syotekentta) {
+    public Nollaa(Sovelluslogiikka sovellus, JTextField tuloskentta, JTextField syotekentta) {
         super(sovellus, tuloskentta, syotekentta);
     }
 
     @Override
     public void suorita() {
         talletaEdellinenArvo();
-
-        alustaSyote();
         sovellus.nollaa();
-        sovellus.plus(Integer.parseInt(tulos.getText()));
-        sovellus.plus(Integer.parseInt(syote.getText()));
         asetaTulos();
-        
-    }
-
-   
+    }    
 }
