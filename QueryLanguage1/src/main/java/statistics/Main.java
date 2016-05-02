@@ -14,5 +14,16 @@ public class Main {
         for (Player player : stats.matches(m)) {
             System.out.println( player );
         }
+        
+        System.out.println("\n");
+        
+        m = new And( new HasFewerThan(10, "goals"),
+                             new HasFewerThan(10, "assists"),
+                             new PlaysIn("PHI")
+        );
+        
+        for (Player player : stats.matches(m)) {
+            System.out.println( player );
+        }
     }
 }
